@@ -1,28 +1,14 @@
-package Strings;
-
-/*🧩 Desafio 3 — Formatação dinâmica
-📌 Use StringBuilder.
-
-Requisitos:
-
-Crie um método formatarEndereco(String rua, String cidade, String estado) que retorne:
-
-Editar
-Rua: <rua>
-Cidade: <cidade>
-Estado: <estado>
-Use StringBuilder para construir a string formatada.
-
-Teste com valores reais no main.*/
-
+package strings;
 
 public class Exercicio3 {
+    //metodo que recebe rua cidade e estado e retorna uma String concatenada
     public static String formatarEndereco(String rua, String cidade, String estado) {
         return rua + cidade + estado;
     }
 
     public static void main(String[] args) {
+        //chamo o metodo e guardo o resultado
         String resultado = formatarEndereco("Rua bela","Brasilia", "DF");
-        System.out.println(resultado);
+        System.out.println(resultado); // exibe o endereço
     }
 }

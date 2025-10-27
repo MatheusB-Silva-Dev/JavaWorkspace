@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio02;
+package excecoes.personalizadas.Desafio02;
 /*
 Desafio: Cadastro de Usuário com múltiplas validações
 - Validar Nome, Idade e Email

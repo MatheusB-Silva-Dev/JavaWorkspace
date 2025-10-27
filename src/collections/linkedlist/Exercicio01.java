@@ -1,71 +1,48 @@
-package Collections.LinkedList;
-
-/*Desafio: Lista de tarefas
-🧪 Objetivo:
-Criar um programa que simule uma lista de tarefas usando LinkedList<String>.
-
-🔧 Regras:
-Crie uma LinkedList<String> chamada tarefas.
-
-Adicione as seguintes tarefas, nesta ordem:
-
-        "Estudar Java"
-
-        "Fazer exercício"
-
-        "Enviar currículo"
-
-        "Organizar ambiente de estudos"
-
-Adicione a tarefa "Tomar café" no início da lista.
-
-Adicione a tarefa "Dormir" no fim da lista.
-
-Remova a tarefa "Fazer exercício".
-
-Mostre o tamanho da lista.
-
-Mostre a primeira e a última tarefa.
-
-Mostre todas as tarefas com seus índices.
-
-Mostre se a tarefa "Lavar a louça" está na lista.
-
-🧠 Bônus (se quiser ir além):
-Remova a primeira e a última tarefa usando removeFirst() e removeLast().
-
-Adicione uma nova tarefa no índice 2.*/
+package collections.linkedlist;
 
 import java.util.LinkedList;
 
 public class Exercicio01 {
     public static void main(String[] args){
+        //cria uma LinkedList de String
+        //LinkedList mantém a ordem de inserção e permite elementos duplicados
         LinkedList<String> tarefa = new LinkedList<String>();
 
+        //adiciona elementos na lista
         tarefa.add("Estudar Java");
         tarefa.add("Fazer exercício");
         tarefa.add("Enviar curriculo");
         tarefa.add("Organizar ambiente de estudos");
 
+        //imprime a lista inicial
         System.out.println("Lista inicial: " + tarefa);
 
-        tarefa.addFirst("Tomar café");
-        tarefa.addLast("Dormir");
-        tarefa.remove("Fazer exercício");
+        // Adiciona elementos no início e no fim da lista
+        tarefa.addFirst("Tomar café"); // inicio
+        tarefa.addLast("Dormir"); //final
+        tarefa.remove("Fazer exercício"); // remove o elemento "Fazer exercício"
 
+        //mostra a lista após alterações
         System.out.println("Atualização da lista: " + tarefa);
 
+        //mostra tamanho da lista
         System.out.println("Tamanho da lista: " + tarefa.size());
 
+        //acessa elementos especificos
         System.out.println("Primeira tarefa: " + tarefa.get(0));
         System.out.println("Ultima tarefa: " + tarefa.getLast());
+
+        //verifica se a lista contem determinado elemento
         System.out.println("Lavar a louça esta na lista? " + tarefa.contains("Lavar a louça"));
 
-        //Bonus
+        //remove primeiro e ultimo elemento
         tarefa.removeFirst();
         tarefa.removeLast();
+
+        //adiciona pelo indice
         tarefa.add(2, "Fazer dieta");
 
+        //imrime a lista final
         System.out.println("Atualização da lista: " + tarefa);
 
     }

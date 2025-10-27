@@ -1,4 +1,4 @@
-package ExeciciosDiversos;
+package execiciosdiversos;
 /*1. Soma dos Pares
 Crie um programa que:
         • 	Recebe 10 números inteiros do usuário

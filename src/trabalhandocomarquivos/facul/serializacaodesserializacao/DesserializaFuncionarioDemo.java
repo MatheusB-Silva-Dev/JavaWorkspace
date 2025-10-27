@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Facul.SerializacaoDesserializacao;
+package trabalhandocomarquivos.facul.serializacaodesserializacao;
 
 import java.io.*;
 

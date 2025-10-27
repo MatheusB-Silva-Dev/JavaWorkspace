@@ -1,10 +1,4 @@
-package TrabalhandoComArquivos.Desafios;
-/*
-Ler um arquivo chamado "entrada.txt" e imprimir todo o conteudo no console.
-Se o arquivo não existir, capturar a exceção e informar ao usuário.
-Garantir que o fluxo de entrada seja fechado corretamente, usando try-catch ou try-with-resources.
-Objetivo: praticar leitura de arquivo, trabalhar com InputStream e consolidar o tratamento de exceções.
-*/
+package trabalhandocomarquivos.desafios;
 
 import java.io.*; //importa todas as classes de entrada/saída
 

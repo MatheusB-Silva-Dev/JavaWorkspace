@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Facul.RelacionamentoDeSerializaçãoComComposiçãoHasA;
+package trabalhandocomarquivos.facul.relacionamentodeserializaçãocomcomposiçãoHasA;
 
 import java.io.File;
 import java.io.FileOutputStream;

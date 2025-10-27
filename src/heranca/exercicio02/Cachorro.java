@@ -1,8 +1,8 @@
-package heranca2;
+package heranca.exercicio02;
 
-public class Cachorro extends Animal{
+public class Cachorro extends Animal {
     @Override
     public void fazerSom() {
-        System.out.println("Au Au");
+        System.out.println("Au Au"); // som especifico do cachorro
     }
 }

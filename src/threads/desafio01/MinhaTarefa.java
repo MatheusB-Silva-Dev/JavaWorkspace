@@ -1,4 +1,4 @@
-package Threads.Desafio01;
+package threads.desafio01;
 
 public class MinhaTarefa implements Runnable {
     @Override

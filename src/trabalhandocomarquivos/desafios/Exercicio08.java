@@ -1,45 +1,64 @@
-package TrabalhandoComArquivos.Desafios;
-
-/*
-Desafio – Lendo arquivo de propriedades com Java
-
-1. Crie um objeto Properties para carregar pares chave-valor.
-2. Carregue as propriedades de um arquivo chamado "minhaConfig.properties" usando o método load().
-3. Mostre no console todas as propriedades carregadas com o método list().
-4. Leia e exiba valores específicos de pelo menos 3 chaves (ex: FileName, Author_Name, Website).
-5. Trate possíveis exceções de I/O (FileNotFoundException e IOException).
-*/
-
+package trabalhandocomarquivos.desafios;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.Scanner;
 
 public class Exercicio08 {
     public static void main(String[] args) {
-        // Cria um objeto Properties que será usado para armazenar pares chave-valor
+        //cria um objeto Properties para armazenar os pares chave-valor
         Properties prop = new Properties();
+        //cria um objeto File que representa o arquivo que será gerado
+        File arquivo = new File("meu_arquivo.properties");
 
-        // O try-with-resources garante que o FileInputStream será fechado automaticamente
-        try (FileInputStream arquivo = new FileInputStream("C:\\Users\\mathe\\IdeaProjects\\Desafios Java\\src\\TrabalhandoComArquivos\\Desafios\\config_exemplo.properties")) {
-            // Carrega as propriedades do arquivo dentro do objeto prop
-            prop.load(arquivo);
+        //scanner para ler entrada do usuário try-with-resources fecha o Scanner automaticamente
+        try (Scanner teclado = new Scanner(System.in)) {
+            System.out.println("Digite as propriedades: ");
 
-            // Lê valores específicos de chaves e mostra no console
-            System.out.println("Nome do arquivo: " + prop.getProperty("FileName"));
-            System.out.println("Autor: " + prop.getProperty("Author"));
-            System.out.println("Website: " + prop.getProperty("Website"));
+            //captura a chave e valor para a propriedade FileName
+            System.out.println("Digite a chave FileName: ");
+            String fileNameChave = teclado.nextLine();
+            System.out.println("Digite o valor FileName: ");
+            String fileNameValor = teclado.nextLine();
+            prop.setProperty(fileNameChave, fileNameValor);
 
-            // Lista todas as propriedades carregadas no console
-            prop.list(System.out);
+            //captura a chave e valor para a propriedade Author_Name
+            System.out.println("Digite a chave Author_Name: ");
+            String AuthorNameChave = teclado.nextLine();
+            System.out.println("Digite o valor Author_Name: ");
+            String AuthorNameValor = teclado.nextLine();
+            prop.setProperty(AuthorNameChave, AuthorNameValor);
 
-        }catch (FileNotFoundException e) {
-            System.out.println("Erro: arquivo não encontrado!");
-        } catch (IOException e) {
-            // Captura qualquer outro erro de entrada/saída (ex: problemas de leitura)
+            //captura a chave e valor para a propriedade Website
+            System.out.println("Digite a chave Website: ");
+            String websitChave = teclado.nextLine();
+            System.out.println("Digite o valor Website: ");
+            String websitValor = teclado.nextLine();
+            prop.setProperty(websitChave, websitValor);
+
+            //captura a chave e valor para a propriedade Topic
+            System.out.println("Digite a chave Website: ");
+            String topicChave = teclado.nextLine();
+            System.out.println("Digite o valor Website: ");
+            String topicValor = teclado.nextLine();
+            prop.setProperty(topicChave, topicValor);
+
+            //grava todas as propriedades no arquivo indicado
+            prop.store(new FileOutputStream(arquivo), null);
+
+            //mostra no console a confirmação e o caminho absoluto do arquivo criado
+            System.out.println("Arquivo gerado com sucesso em: " + arquivo.getAbsolutePath());
+
+        } catch (FileNotFoundException e) {
             System.out.println("Erro: " + e.getMessage());
+        } catch (IOException ex) {
+            System.out.println("Erro: " + ex.getMessage());
         }
+
+
+
     }
 }

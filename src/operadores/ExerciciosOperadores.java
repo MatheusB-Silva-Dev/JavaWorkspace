@@ -1,3 +1,5 @@
+package operadores;
+
 public class ExerciciosOperadores {
     public static void main (String[] args){
         /*int a = 15;
@@ -25,9 +27,6 @@ public class ExerciciosOperadores {
         System.out.println(saldo *= 50.0);
         System.out.println(saldo /= 10.0);
         System.out.println(saldo %= 11.0);
-
-
-
 
     }
 }

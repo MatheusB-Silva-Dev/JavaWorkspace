@@ -1,4 +1,4 @@
-package Threads.Desafio01;
+package threads.desafio01;
 
 public class Testando {
     public static void main(String[] args) throws InterruptedException {

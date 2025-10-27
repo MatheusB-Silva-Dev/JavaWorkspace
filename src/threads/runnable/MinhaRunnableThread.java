@@ -1,4 +1,4 @@
-package Threads.Runnable;
+package threads.runnable;
 
 class MinhaRunnableThread implements Runnable {
     @Override

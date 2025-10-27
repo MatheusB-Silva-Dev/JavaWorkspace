@@ -1,6 +1,6 @@
-import java.util.Scanner;
+package instrucoes;
 
-public class InstruçaoIfElseSwitch {
+public class InstrucaoIfElseSwitch {
     public static void main (String[] ars){
         /*int valor = 8;
 

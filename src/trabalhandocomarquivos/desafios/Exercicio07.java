@@ -1,48 +1,33 @@
-package TrabalhandoComArquivos.Desafios;
+package trabalhandocomarquivos.desafios;
 
-/*
-Exercicio – Gravando arquivo com FileOutputStream
-
-1. Leia do teclado linhas de texto digitadas pelo usuário.
-2. Grave cada linha em um arquivo chamado "saida_bytes.txt" usando FileOutputStream.
-   - Converta cada linha em um array de bytes antes de gravar.
-   - Adicione um quebra de linha manualmente ("\n") para separar as linhas.
-3. O programa deve parar quando o usuário digitar "sair" (ignorando maiúsculas e minúsculas).
-4. Mostre ao final o caminho absoluto do arquivo criado.
-*/
-
-import java.io.*;
-import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Exercicio07 {
     public static void main(String[] args) {
+        // Cria um objeto Properties que será usado para armazenar pares chave-valor
+        Properties prop = new Properties();
 
-        // Cria um objeto File que representa o arquivo de saída
-        File arquivo = new File("saida_bytes.txt");
+        // O try-with-resources garante que o FileInputStream será fechado automaticamente
+        try (FileInputStream arquivo = new FileInputStream("C:\\Users\\mathe\\IdeaProjects\\Desafios Java\\src\\TrabalhandoComArquivos\\Desafios\\config_exemplo.properties")) {
+            // Carrega as propriedades do arquivo dentro do objeto prop
+            prop.load(arquivo);
 
-        // try-with-resources: Scanner para entrada e FileOutputStream para escrita em bytes
-        try (Scanner teclado = new Scanner(System.in);
-            OutputStream ostream = new FileOutputStream(arquivo)) {
+            // Lê valores específicos de chaves e mostra no console
+            System.out.println("Nome do arquivo: " + prop.getProperty("FileName"));
+            System.out.println("Autor: " + prop.getProperty("Author"));
+            System.out.println("Website: " + prop.getProperty("Website"));
 
-            System.out.println("Digite o texto (digite 'sair' para encerrar):");
+            // Lista todas as propriedades carregadas no console
+            prop.list(System.out);
 
-
-            while (true) {
-                String escrita = teclado.nextLine();
-
-                if (escrita.equalsIgnoreCase("sair")) break;
-
-                // Escrevendo no arquivo (convertendo String para bytes)
-                ostream.write(escrita.getBytes());
-                // adiciona quebra de linha
-                ostream.write("\n".getBytes());
-            }
-
-            System.out.println("Localização do arquivo: " + arquivo.getAbsolutePath());
-
+        }catch (FileNotFoundException e) {
+            System.out.println("Erro: arquivo não encontrado!");
         } catch (IOException e) {
+            // Captura qualquer outro erro de entrada/saída (ex: problemas de leitura)
             System.out.println("Erro: " + e.getMessage());
         }
-
     }
 }

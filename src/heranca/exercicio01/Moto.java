@@ -1,4 +1,4 @@
-package heranca;
+package heranca.exercicio01;
 
 public class Moto extends Veiculo {
     // Construtor da classe Moto

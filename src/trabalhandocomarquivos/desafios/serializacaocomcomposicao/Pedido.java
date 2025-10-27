@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Desafios.SerializacaoComComposicao;
+package trabalhandocomarquivos.desafios.serializacaocomcomposicao;
 
 import java.io.Serializable;
 

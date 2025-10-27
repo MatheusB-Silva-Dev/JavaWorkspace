@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio04;
+package excecoes.personalizadas.Desafio04;
 
 import java.util.Scanner;
 

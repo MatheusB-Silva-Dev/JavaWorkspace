@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio01;
+package excecoes.personalizadas.Desafio01;
 
 import java.util.Scanner;
 
@@ -20,7 +20,8 @@ public class CadastroUsuario {
 
     public void idade(int idade) throws IdadeInvalidaException { // throws indica que esse metodo pode lançar uma exceção
         if(idade < 18) {
-            throw new IdadeInvalidaException("Idade menor que 18 não permitida!");// cria o obejto da exceção com a mensagem personalizada e e aqui que o super e acionado e a mensagem
+            throw new IdadeInvalidaException("Idade menor que 18 não permitida!");// cria o obejto da exceção com a mensagem personalizada e
+                                                                                  //e aqui que o super e acionado e a mensagem
                                                                                   // e enviada para a classe pai atraves do super
         }
     }

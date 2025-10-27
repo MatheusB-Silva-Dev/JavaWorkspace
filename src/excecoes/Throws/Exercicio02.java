@@ -1,50 +1,34 @@
-package Excecoes.Throws;
-/*Desafio: Divisão com throws e try-catch
-O que fazer:
-
-Crie um método chamado dividir que receba dois int como parâmetros e retorne o resultado da divisão a / b.
-
-Declare que esse método lança uma exceção do tipo ArithmeticException usando throws.
-
-No método main, peça para o usuário digitar dois números inteiros.
-
-Chame o método dividir dentro de um bloco try.
-
-Capture a exceção ArithmeticException no catch e mostre a mensagem:
-        "Erro: divisão por zero não é permitida!"
-
-Se a divisão for bem-sucedida, imprima o resultado.
-
-        Extras:
-
-Use o Scanner para ler os números do usuário.
-
-Trate o fechamento do Scanner ao final.*/
+package excecoes.Throws;
 
 import java.util.Scanner;
 
 public class Exercicio02 {
     public static void main(String[] args){
+        //cria um Scanner para capturar a entrada do usuario
         Scanner teclado = new Scanner(System.in);
 
+        //solicita o primeiro numero
         System.out.println("Digite o primeiro número: ");
         int a = teclado.nextInt();
 
+        //solicita o segundo numero
         System.out.println("Digite o segundo número: ");
         int b = teclado.nextInt();
 
         try{
+            //chama o metodo dividir para realizar a divisão
            new Exercicio02().dividir(a, b);
         } catch (ArithmeticException e) {
+            //captura erro de divisão por zero
             System.out.println("Divisão por zero não é permitida.");
         } finally {
-            teclado.close();
+            teclado.close(); //fecha scanner
         }
 
     }
 
     public void dividir(int a, int b) throws ArithmeticException {
-        int resultado = a / b;
-        System.out.println("Resultado da divisão: " + resultado);
+        int resultado = a / b; //realiza a divisão
+        System.out.println("Resultado da divisão: " + resultado); //exibe o resultado
     }
 }

@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Desafios.SerializandoDesserializando;
+package trabalhandocomarquivos.desafios.serializandodesserializando;
 
 // Classe molde para armazenar dados de um aluno
 // Implementa Serializable para permitir que objetos dessa classe

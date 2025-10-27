@@ -1,4 +1,4 @@
-package Threads.ExtendendoDeThread;
+package threads.extendendodethread;
 
 public class Main {
     public static void main(String[] args) {

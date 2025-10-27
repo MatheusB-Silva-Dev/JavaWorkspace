@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio03;
+package excecoes.personalizadas.Desafio03;
 
 public class NomeProdutoInvalidoException extends RuntimeException {
     // exceção para nome de produto invalido

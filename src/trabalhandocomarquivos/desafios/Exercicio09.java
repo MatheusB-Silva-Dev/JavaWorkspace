@@ -1,74 +1,53 @@
-package TrabalhandoComArquivos.Desafios;
+package trabalhandocomarquivos.desafios;
 
-/*
-Desafio – Gravando arquivo de propriedades com Java (store)
-
- Crie um objeto Properties para armazenar pares chave-valor.
- Peça para o usuário digitar pelo menos 4 propriedades diferentes (ex: FileName, Author_Name, Website, Topic).
- Grave essas propriedades em um arquivo chamado "minhaConfigSaida.properties" usando o método store().
- Mostre no console a mensagem de sucesso e o caminho absoluto do arquivo criado.
- Trate possíveis exceções de I/O (FileNotFoundException e IOException).
-*/
+//Corrigindo o codigo do Exercicio08 com chaves fixas pedindo somente valores ao usuario
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
 
 public class Exercicio09 {
     public static void main(String[] args) {
-        //cria um objeto Properties para armazenar os pares chave-valor
+        //cria um objeto Properties para armazenar pares chave-valor
         Properties prop = new Properties();
-        //cria um objeto File que representa o arquivo que será gerado
+        //cria um objeto File apontando para o arquivo que será criado
         File arquivo = new File("meu_arquivo.properties");
 
-        //scanner para ler entrada do usuário try-with-resources fecha o Scanner automaticamente
         try (Scanner teclado = new Scanner(System.in)) {
-            System.out.println("Digite as propriedades: ");
+            System.out.println("Digite os valores das propriedades: ");
 
-            //captura a chave e valor para a propriedade FileName
-            System.out.println("Digite a chave FileName: ");
-            String fileNameChave = teclado.nextLine();
-            System.out.println("Digite o valor FileName: ");
+            //solicita e armazena o valor para a chave FileName
+            System.out.print("Valor para FileName: ");
             String fileNameValor = teclado.nextLine();
-            prop.setProperty(fileNameChave, fileNameValor);
+            prop.setProperty("FileName", fileNameValor);
 
-            //captura a chave e valor para a propriedade Author_Name
-            System.out.println("Digite a chave Author_Name: ");
-            String AuthorNameChave = teclado.nextLine();
-            System.out.println("Digite o valor Author_Name: ");
-            String AuthorNameValor = teclado.nextLine();
-            prop.setProperty(AuthorNameChave, AuthorNameValor);
+            //solicita e armazena o valor para a chave Author_Name
+            System.out.print("Valor para Author_Name: ");
+            String authorNameValor = teclado.nextLine();
+            prop.setProperty("Author_Name", authorNameValor);
 
-            //captura a chave e valor para a propriedade Website
-            System.out.println("Digite a chave Website: ");
-            String websitChave = teclado.nextLine();
-            System.out.println("Digite o valor Website: ");
-            String websitValor = teclado.nextLine();
-            prop.setProperty(websitChave, websitValor);
+            //solicita e armazena o valor para a chave website
+            System.out.print("Valor para Website: ");
+            String websiteValor = teclado.nextLine();
+            prop.setProperty("Website", websiteValor);
 
-            //captura a chave e valor para a propriedade Topic
-            System.out.println("Digite a chave Website: ");
-            String topicChave = teclado.nextLine();
-            System.out.println("Digite o valor Website: ");
+            //solicita e armazena o valor para a chave topic
+            System.out.print("Valor para Topic: ");
             String topicValor = teclado.nextLine();
-            prop.setProperty(topicChave, topicValor);
+            prop.setProperty("Topic", topicValor);
 
-            //grava todas as propriedades no arquivo indicado
-            prop.store(new FileOutputStream(arquivo), null);
+            //gravando as propriedades no arquivo
+            prop.store(new FileOutputStream(arquivo), "Arquivo de propriedades criado pelo usuário");
 
-            //mostra no console a confirmação e o caminho absoluto do arquivo criado
             System.out.println("Arquivo gerado com sucesso em: " + arquivo.getAbsolutePath());
 
         } catch (FileNotFoundException e) {
-            System.out.println("Erro: " + e.getMessage());
+            System.out.println("Erro: arquivo não encontrado!");
         } catch (IOException ex) {
             System.out.println("Erro: " + ex.getMessage());
         }
-
-
-
     }
 }

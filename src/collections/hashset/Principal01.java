@@ -1,24 +1,18 @@
-package Collections.HashSet;
+package collections.hashset;
 import java.util.HashSet;
 
 public class Principal01 {
 
     public static void main(String[] args) {
 
+        //cria o hashset de string
         HashSet<String> hs = new HashSet<String>();
-
-        // Adicionando elementos ao HashSet
-
+        //adicionando elementos ao HashSet
         hs.add("M");
-
         hs.add("B");
-
         hs.add("C");
-
         hs.add("A");
-
         hs.add("M");
-
         hs.add("X");
 
         System.out.println("Tamanho do HashSet= " + hs.size());

@@ -1,4 +1,4 @@
-package Threads.ExtendendoDeThread;
+package threads.extendendodethread;
 
 // Classe que estende diretamente Thread
 class MinhaThread extends Thread {

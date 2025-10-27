@@ -1,25 +1,4 @@
-package Excecoes.TryCathAninhados;
-/*Desafio: Calculadora Interativa com Try-Catch Aninhado
-🧪 Objetivo:
-Criar uma calculadora que:
-        - Pede dois números ao usuário
-- Pede a operação desejada: +, -, *, /
-        - Executa a operação
-- Trata os seguintes erros:
-        - Entrada inválida (texto em vez de número)
-- Operação inválida (símbolo desconhecido)
-- Divisão por zero
-- Conversão de texto para número
-
-📋 Requisitos:
-        - Use Scanner para entrada
-- Use try-catch aninhado para tratar:
-        - InputMismatchException
-- ArithmeticException
-- NumberFormatException
-- IllegalArgumentException (operação inválida)
-- Feche o Scanner corretamente
-- Exiba mensagens amigáveis para cada erro*/
+package excecoes.trycathaninhados;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -36,11 +15,10 @@ public class Exercicio03 {
 
             System.out.println("Digite o segundo número: ");
             int num2 = teclado.nextInt();
-
-            teclado.nextLine();
+            teclado.nextLine();  // limpa o buffer para ler a operação
 
             try {
-                // Leitura da operação desejada
+                //leitura da operação desejada
                 System.out.print("Digite a operação desejada (+, -, *, /): ");
                 String operacao = teclado.nextLine();
 
@@ -57,27 +35,28 @@ public class Exercicio03 {
                         break;
                     case "/":
                         if (num2 == 0) {
+                            // lança exceção se tentar dividir por zero
                             throw new ArithmeticException("Divisão por zero");
                         }
-                        resultado = num1 / num2;
+                        resultado = num1 / num2; // realiza divisão inteira
                         break;
-                    default:
+                    default: // se o usuario digitou qualquer outro simbolo
                         throw new IllegalArgumentException("Operação inválida");
                 }
 
                 System.out.println("Resultado da operação: " + resultado);
 
-            } catch (ArithmeticException e) {
+            } catch (ArithmeticException e) { // trata divisão por zero
                 System.out.println("Erro: não é possível dividir por zero.");
-            } catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) { // trata operação invalida
                 System.out.println("Erro: operação inválida. Use apenas +, -, * ou /.");
             }
 
-        } catch (NumberFormatException e) {
+        } catch (InputMismatchException e) {  //trata números invalidos
             System.out.println("Erro: entrada inválida. Digite apenas números inteiros.");
         } finally {
-            teclado.close();
-            System.out.println("Calculadora finalizada.");
+            teclado.close(); // fecha Scanner
+            System.out.println("Calculadora finalizada.");  // mensagem de encerramento
         }
     }
 }

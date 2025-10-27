@@ -1,27 +1,12 @@
-package ModificadoresDeAcesso;
-
-/*Desafio 1 — Visibilidade private
-Crie uma classe ContaBancaria com os atributos:
-
-private String titular
-
-private double saldo
-
-E os métodos:
-
-public void depositar(double valor)
-
-public void sacar(double valor)
-
-public void exibirSaldo()
-
-⚠️ Ponto de atenção:
-Você conseguirá acessar os atributos diretamente no main? Se não, por quê?*/
+package modificadoresdeacesso.privates;
 
 public class ContaBancaria {
+    //O modificador 'private' impede que qualquer outra classe acesse esses atributos diretamente
+    //Ex: contabancaria.saldo = 1000; // ERRO de compilação
     private String titular;
     private double saldo;
 
+    // Getters e Setters permitem acesso controlado aos atributos privados
     public String getTitular() {
         return titular;
     }
@@ -38,6 +23,7 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
+    //Metodos da classe esses métodos também são públicos e permitem manipular os atributos privados de forma segura
     public void depositar(double valor) {
         this.saldo += valor;
         System.out.println("Deposito realizado, compensação em até 30 minutos! valor: " + saldo);

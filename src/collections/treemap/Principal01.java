@@ -1,4 +1,4 @@
-package CollectionsPT2.TreeMap;
+package collections.treemap;
 
 import java.util.Map;
 import java.util.TreeMap;

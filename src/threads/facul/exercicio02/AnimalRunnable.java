@@ -1,4 +1,4 @@
-package Threads.Facul2;
+package threads.facul.exercicio02;
 
 public class AnimalRunnable implements Runnable {
 

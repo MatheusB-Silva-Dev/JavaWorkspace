@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio02;
+package excecoes.personalizadas.Desafio02;
 
 public class IdadeInvalidaExecption extends Exception {
     // exceção para idade invalida

@@ -1,4 +1,4 @@
-package ExeciciosDiversos.MediaComClasse;
+package execiciosdiversos.MediaComClasse;
 
 /*2. Calculadora de Média com Classe
 - Crie uma classe Aluno com nome e 3 notas

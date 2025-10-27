@@ -1,47 +1,17 @@
-package Collections.TreeSet.DesafioTreeSetComClassePersonalizada;
-/*Desafio Final: Lista de Alunos Ordenados
-🎯 Objetivo:
-Criar uma lista de alunos usando TreeSet<Aluno> ordenada automaticamente por nome, sem duplicados.
+package collections.treeset.DesafioTreeSetComClassePersonalizada;
 
-        📋 Regras:
-Crie a classe Aluno com:
-
-nome (String)
-
-matricula (int)
-
-A classe deve implementar Comparable<Aluno> e ordenar por nome (em ordem alfabética).
-
-No método main, crie um TreeSet<Aluno>.
-
-Adicione os seguintes alunos:
-
-        "Carlos", matrícula 101
-
-        "Ana", matrícula 102
-
-        "Beatriz", matrícula 103
-
-        "Carlos", matrícula 104 (nome repetido propositalmente)
-
-        "Eduardo", matrícula 105
-
-Exiba todos os alunos com:
-
-Aluno: <nome> | Matrícula: <número>
-🧠 Bônus:
-Tente adicionar null. O que acontece?
-
-Tente mudar a ordenação para por matrícula (int). O que muda?*/
-
+// Classe Aluno implementando Comparable para TreeSet
 public class Aluno implements Comparable<Aluno> {
     private String nome;
     private int matricula;
 
+    //construtor da classe
     public Aluno(String nome, int matricula) {
         this.nome = nome;
         this.matricula = matricula;
     }
+
+    //getters e setters
     public String getNome() {
         return nome;
     }
@@ -58,6 +28,7 @@ public class Aluno implements Comparable<Aluno> {
         this.matricula = matricula;
     }
 
+    //metodo necessario para TreeSet definir a ordem dos objetos
     @Override
     public int compareTo(Aluno outro) {
         return this.nome.compareTo(outro.nome);

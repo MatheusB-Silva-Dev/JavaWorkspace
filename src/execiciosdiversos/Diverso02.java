@@ -1,4 +1,4 @@
-package ExeciciosDiversos;
+package execiciosdiversos;
 /* Tabuada Inteligente
 - Receba um número entre 1 e 10
         - Imprima a tabuada desse número de 1 a 10

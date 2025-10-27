@@ -1,15 +1,7 @@
-package heranca2;
-
-/*1. Herança
-Crie uma classe base chamada Animal com um método fazerSom() que imprime uma mensagem genérica.
-
-Crie subclasses Cachorro e Gato que herdam de Animal e sobrescrevem o método fazerSom() para imprimir “Au au” e “Miau”, respectivamente.
-
-Na classe Main, crie objetos dessas subclasses e chame fazerSom() para cada um.*/
-
-
+package heranca.exercicio02;
 
 public class Animal {
+    //metodo generico que pode ser sobrescrito pelas subclasses
     public void fazerSom() {
         System.out.println("Fazendo som");
     }

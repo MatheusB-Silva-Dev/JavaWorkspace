@@ -1,58 +1,55 @@
-package Excecoes.ExcecoesCheckedUnchecked;
-
-/*Crie um programa com menu simples:
-
-Opção 1: Pedir ao usuário o caminho de um arquivo e tentar ler.
-
-Se o arquivo não existir, capturar a exceção checked (IOException) e mostrar: "Arquivo não encontrado: <mensagem>".
-
-Opção 2: Pedir dois números e tentar dividir.
-
-Se o usuário digitar o divisor zero, capturar a exceção unchecked (ArithmeticException) e mostrar: "Erro: divisão por zero não é permitida".
-
-No final, o programa deve imprimir "Programa finalizado com sucesso", independente do que aconteceu.*/
+package excecoes.excecoescheckedunchecked;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class Exercicio01 {
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in); //criação do Scanner para leitura de dados via console
 
-        //Checked Exception
+        //checked Exceptions aquelas que o compilador exige tratamento try/catch obrigatório
         try{
+            //tenta abrir e ler um arquivo que não existe
             BufferedReader reader = new BufferedReader(new FileReader("arquivo_inexistente.txt"));
             String linha = reader.readLine();
             reader.close();
         } catch(IOException e) {
+            //captura o erro caso o arquivo não seja encontrado ou ocorra falha na leitura
             System.out.println("Arquivo não encontrado: " + e.getMessage());
         }
 
-        Scanner teclado = new Scanner(System.in);
-
-        //Unchecked Exception
+        //Unchecked Exceptions são erros em tempo de execução não obrigatórios de tratar, mas recomendavel
         try{
             System.out.println("Digite o primeiro número: ");
-            int num1 = teclado.nextInt();
+            int num1 = teclado.nextInt(); //pode gerar InputMismatchException se for digitado algo que não seja numero
 
             System.out.println("Digite o segundo numero: ");
-            int num2 = teclado.nextInt();
+            int num2 = teclado.nextInt(); //tambem pode gerar InputMismatchException
 
+            //chama o metodo que faz a divisão, atraves da propria classe
             new Exercicio01().dividir(num1, num2);
 
         } catch(ArithmeticException e)  {
+            //captura divisões por zero exemplo classico de Unchecked Exception
             System.out.println("Divisão por zero não permitida!");
+        } catch (InputMismatchException e) {
+            //captura entradas invalidas exemplo: se o usuário digitar texto em vez de numero
+            System.out.println("Digite apenas numeros!");
         } finally {
+            //o bloco finally e executado sempre com ou sem erro
             System.out.println("Programa finalizado com sucesso!");
-            teclado.close();
+            teclado.close(); //fecha o scanner
         }
-
 
     }
 
-    public void dividir(int num1, int num2) {
+    //Metodo que realiza a divisão entre dois numeros inteiros
+    public void dividir(int num1, int num2) throws ArithmeticException, InputMismatchException {
+        //pode lançar ArithmeticException caso o divisor (num2) seja zero
         int resul = num1 / num2;
         System.out.println("Resultado da divisão: " + resul);
     }

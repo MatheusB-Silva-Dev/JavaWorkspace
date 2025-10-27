@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio03;
+package excecoes.personalizadas.Desafio03;
 
 // exceção para nome de quantidade invalida
 public class QuantidadeInvalidoException extends RuntimeException {

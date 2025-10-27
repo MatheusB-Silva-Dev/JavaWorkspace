@@ -1,4 +1,4 @@
-package CollectionsPT2.HashMap;
+package collections.hashmap;
 
 import java.util.*;
 
@@ -7,21 +7,14 @@ public class Principal01 {
     public static void main(String[] args) {
 
         //Abaixo da linha criará o HashMap com tamanho inicial 10 e 0,5 fator de carga
-
         Map<String, Integer>funcSal = new HashMap<String, Integer>(10, 0.5f);
 
         //Adicionando nome do funcionário e salário ao map
-
         funcSal.put("Rita", 10000);
-
         funcSal.put("Samuel", 20000);
-
         funcSal.put("Maria", 30000);
-
         funcSal.put("Nicole", 1000);
-
         funcSal.put("Noemi", 15000);
-
         funcSal.put("Raquel", 10000); // Valor duplicado também permitido, mas as chaves não devem ser duplicadas
 
         funcSal.put("Nicolas", null); //O valor também pode ser nulo
@@ -33,17 +26,14 @@ public class Principal01 {
         funcSal.put("Renato", 23000);
 
         //Removing one key-value pair
-
         funcSal.remove("Nicolas");
 
-        System.out.println("Updated Map: "+funcSal);// Mostrando Map completo
+        System.out.println("Map aualizado: "+funcSal);// Mostrando Map completo
 
         //Imprimir todas as chaves
-
         System.out.println(funcSal.keySet());
 
         //Imprimindo todos os valores
-
         System.out.println(funcSal.values());
 
     }

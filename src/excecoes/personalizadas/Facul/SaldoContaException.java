@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Facul;
+package excecoes.personalizadas.Facul;
 
 // exceção personalizada para saldo de conta
 public class SaldoContaException extends Exception {

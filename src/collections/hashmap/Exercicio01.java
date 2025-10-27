@@ -1,4 +1,4 @@
-package CollectionsPT2.HashMap;
+package collections.hashmap;
 
 /*Mini Agenda com HashMap<String, String>
 Objetivo:
@@ -34,33 +34,37 @@ import java.util.Scanner;
 
 public class Exercicio01 {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        Map<String, String> agenda = new HashMap<>();
+        Scanner teclado = new Scanner(System.in); //scanner para ler entradas do usuário
+        //Não mantm nenhuma ordem dos elementos
+        Map<String, String> agenda = new HashMap<>(); //cria um HashMap para armazenar contatos (nome / número)
 
+        //laço para cadastrar 3 contatos
         for(int i = 1; i <=3; i++){
             System.out.println("Digite o nome do contato: ");
-            String nome = teclado.nextLine();
+            String nome = teclado.nextLine(); //le o nome do contato
 
             System.out.println("Digite o número correspondente: ");
-            String contato = teclado.nextLine();
+            String contato = teclado.nextLine(); //le o número do contato
 
-            agenda.put(nome, contato);
+            agenda.put(nome, contato); //adiciona o contato no HashMap
         }
 
+        //exibe todos os contatos cadastrados
         System.out.println("Contatos cadastrados abaixo: ");
         for(Map.Entry<String, String> entry : agenda.entrySet()){
             System.out.println("Nome: " + entry.getKey() + " Contato: " + entry.getValue());
         }
 
+        //busca um contato específico pelo nome
         System.out.println("Digite o contato que deseja buscar: ");
         String busca = teclado.nextLine();
 
-        if(agenda.containsKey(busca)) {
+        if(agenda.containsKey(busca)) { //verifica se o nome existe no HashMap
             System.out.println("Telefone de " + busca + ": " + agenda.get(busca));
         } else {
-            System.out.println("Contato não encontrado.");
+            System.out.println("Contato não encontrado."); //mensagem caso o contato não exista
         }
 
-        teclado.close();
+        teclado.close(); //fecha o scanner
     }
 }

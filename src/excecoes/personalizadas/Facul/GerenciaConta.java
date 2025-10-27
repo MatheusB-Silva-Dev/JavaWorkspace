@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Facul;
+package excecoes.personalizadas.Facul;
 
 import java.util.Scanner;
 

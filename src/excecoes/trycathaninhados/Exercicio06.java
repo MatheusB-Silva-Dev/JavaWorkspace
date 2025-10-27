@@ -1,26 +1,4 @@
-package Excecoes.TryCathAninhados;
-
-/*Desafio adaptado: Operações Matemáticas em Camadas
-
-Try externo → trata entrada inválida (InputMismatchException).
-
-Usuário deve digitar dois inteiros.
-
-        Try do meio → trata divisão por zero (ArithmeticException).
-
-Realiza a divisão: num1 / num2.
-
-Try interno → trata multiplicação com um número fixo (ou alguma outra operação que possa gerar erro, por exemplo, overflow).
-
-Aqui podemos apenas simular uma operação que poderia falhar, ou simplesmente mostrar que o bloco interno executa apenas após a divisão ter sucesso.
-
-Finally em cada nível → imprimir mensagens diferentes:
-
-        "Finalizando bloco interno"
-
-        "Finalizando bloco do meio"
-
-        "Finalizando bloco externo"*/
+package excecoes.trycathaninhados;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -30,6 +8,7 @@ public class Exercicio06 {
         Scanner teclado = new Scanner(System.in);
 
         try{
+            //leitura dos dois primeiros números para divisão
             System.out.println("Digite um número inteiro: ");
             int num1 = teclado.nextInt();
 
@@ -37,14 +16,15 @@ public class Exercicio06 {
             int num2 = teclado.nextInt();
 
             try{
-                new Exercicio06().dividir(num1, num2);
+                new Exercicio06().dividir(num1, num2); // chama etodo de divisão
 
-            }catch (ArithmeticException e){
+            }catch (ArithmeticException e){ // trata divisão por zero
                 System.out.println("Divisão por zero não permitida!");
             }finally {
-                System.out.println("Finalizando bloco interno.");
+                System.out.println("Finalizando bloco interno."); // mensagem de encerramento do bloco interno
             }
 
+            //Segundo bloco: multiplicação simples
             try {
                 int numero = 100;
                 System.out.println("Digite um valor para multiplicar por 100: ");
@@ -52,11 +32,11 @@ public class Exercicio06 {
                 int resul = numero * num3;
                 System.out.println("Resultado da multiplicação: " + resul);
 
-            } catch (InputMismatchException e){
+            } catch (InputMismatchException e){ // trata entrada inválida
                 System.out.println("Bloco teste, digite apenas número!");
 
             }finally {
-                System.out.println("Finalizando bloco do meio!");
+                System.out.println("Finalizando bloco do meio!"); // mensagem de encerramento do bloco do meio
             }
 
         }catch (InputMismatchException e) {
@@ -66,8 +46,9 @@ public class Exercicio06 {
         }
     }
 
+    //metodo que realiza divisão entre dois inteiros
     public void dividir(int num1, int num2){
-        int resultado = num1 / num2;
+        int resultado = num1 / num2; // divisão inteira
         System.out.println("Resultado da divisão: " + resultado);
     }
 }

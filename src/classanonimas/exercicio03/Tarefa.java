@@ -1,20 +1,7 @@
-package ClassAnonimas3;
-/*📝 Enunciado
-Crie uma interface chamada Tarefa.
-Ela deve declarar dois métodos:
+package classanonimas.exercicio03;
 
-void definirDescricao(String descricao)
-
-void mostrarDescricao()
-
-        Na main, crie uma classe anônima que:
-
-Guarde internamente a descrição passada.
-
-Mostre a descrição no mostrarDescricao().*/
-
-
+//interface que define um contrato com dois métodos definir e mostrar descrição
 public interface Tarefa {
-    void definirDescricao(String descricao);
+    void definirDescricao(String definir);
     void mostrarDescricao();
 }

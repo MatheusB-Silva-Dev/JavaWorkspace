@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Facul;
+package trabalhandocomarquivos.facul;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,7 +11,7 @@ public class ExercicioLoopDemo {
     public static void main(String[] args) {
         Properties prop = new Properties();
         File arquivo = new File("meu_arquivo.properties");
-        // Array com as chaves fixas que vamos usar no arquivo de propriedades
+        // array.Array com as chaves fixas que vamos usar no arquivo de propriedades
         String[] chaves = {"FileName", "Author_Name", "Website", "Topic"};
 
         try (Scanner teclado = new Scanner(System.in)) {

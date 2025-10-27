@@ -1,4 +1,4 @@
-package Threads.Desafio01Adaptado;
+package threads.desafio01adaptado;
 
 public class MinhaTarefa implements Runnable {
     private int limite; // variável de instância, cada thread pode ter valor diferente

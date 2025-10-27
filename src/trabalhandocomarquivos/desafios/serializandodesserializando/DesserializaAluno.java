@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Desafios.SerializandoDesserializando;
+package trabalhandocomarquivos.desafios.serializandodesserializando;
 
 import java.io.*;
 

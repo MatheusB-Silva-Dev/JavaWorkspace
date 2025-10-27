@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Desafios;
+package trabalhandocomarquivos.desafios;
 
 // Desafio Classe File
 // Objetivo: Manipular arquivos e pastas

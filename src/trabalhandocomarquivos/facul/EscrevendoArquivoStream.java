@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Facul;
+package trabalhandocomarquivos.facul;
 
 import java.io.*;
 

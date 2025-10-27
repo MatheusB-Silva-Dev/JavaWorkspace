@@ -1,6 +1,4 @@
-package Excecoes.Personalizadas.Desafio03;
-
-import java.util.Scanner;
+package excecoes.personalizadas.Desafio03;
 
 //codigo para destacar unchecked exception, mostrando que o codigo executa mesmo sem tratamento try catch ou uso do throws, difrente das exceções checked
 public class CadastroProduto {
@@ -22,7 +20,7 @@ public class CadastroProduto {
     // metodo para validar nome
     public void validaNome(String nome) {
         if(nome == null || nome.length() < 3) {
-            throw new NomeProdutoInvalidoException("Nome do produto não pode ser nulo!");
+            throw new NomeProdutoInvalidoException("Nome do produto não pode ser nulo!"); // dipara para o super
         } else {
             System.out.println(nome);
         }
@@ -32,7 +30,7 @@ public class CadastroProduto {
     // metodo para validar quantidade
     public void validaQuantidade(int quant) {
         if(quant < 0) {
-            throw new QuantidadeInvalidoException("Quantidade não pode ser negativa!");
+            throw new QuantidadeInvalidoException("Quantidade não pode ser negativa!"); // dipara para o super
         } else {
             System.out.println(quant);
         }

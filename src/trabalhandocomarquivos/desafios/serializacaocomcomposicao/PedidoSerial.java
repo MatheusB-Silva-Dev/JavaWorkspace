@@ -1,16 +1,4 @@
-package TrabalhandoComArquivos.Desafios.SerializacaoComComposicao;
-
-/*
-  DESAFIO – SERIALIZAÇÃO COM COMPOSIÇÃO
-
-Classe Produto: nome (String), preco (double)
-Classe Pedido: id (String), produto (Produto) → Has-A
-Classe PedidoSerialDemo (main):
-- Criar Pedido com Produto
-- Serializar em "Pedido.ser"
-- Mensagem confirmando serialização
-Bônus: Desserializar e imprimir id, nome e preço
-*/
+package trabalhandocomarquivos.desafios.serializacaocomcomposicao;
 
 import java.io.*;
 

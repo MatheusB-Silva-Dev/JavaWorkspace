@@ -1,4 +1,4 @@
-package Threads.Facul;
+package threads.facul.exercicio01;
 
 public class TesteMinhaRunnable {
 

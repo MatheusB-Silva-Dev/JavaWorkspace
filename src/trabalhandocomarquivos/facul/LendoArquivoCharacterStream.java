@@ -1,15 +1,6 @@
-package TrabalhandoComArquivos.Facul;
+package trabalhandocomarquivos.facul;
 
 import java.io.*;
-
-/*
-Objetivo deste código:
-Ler um arquivo de texto chamado "Data.txt" usando fluxo de caracteres.
-Mostrar o conteúdo do arquivo no console, linha por linha.
-Diferente do fluxo de bytes (FileInputStream), o fluxo de caracteres (FileReader + BufferedReader)
-Entende diretamente caracteres Unicode, facilitando a leitura de textos.
-Serve apenas como referência para comparação entre leitura de bytes e leitura de caracteres.
-*/
 
 public class LendoArquivoCharacterStream {
 

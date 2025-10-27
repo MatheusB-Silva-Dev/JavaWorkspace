@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Desafios;
+package trabalhandocomarquivos.desafios;
 
 import java.io.File;
 

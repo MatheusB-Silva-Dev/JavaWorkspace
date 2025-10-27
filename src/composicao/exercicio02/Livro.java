@@ -1,16 +1,20 @@
-package Composicao2;
+package composicao.exercicio02;
 
+
+//classe Livro com atributos basicos
 public class Livro {
     private String titulo;
     private String autor;
     private int numeroDePaginas;
 
+    //construtor para inicializar o livro
     public Livro(String titulo, String autor, int numeroDePaginas) {
         this.titulo = titulo;
         this.autor = autor;
         this.numeroDePaginas = numeroDePaginas;
     }
 
+    //Getters e Setters
     public String getTitulo() {
         return titulo;
     }

@@ -1,30 +1,4 @@
-package Excecoes.Throws;
-
-/*Desafio: Validação de Login com Throws
-
-Objetivo: criar um método que valida usuário e senha, usando throw e throws.
-
-Regras:
-
-Crie um método validarLogin(String usuario, String senha) que lança uma exceção (throw) se:
-
-usuario for diferente de "admin" → mensagem: "Usuário inválido!"
-
-senha for diferente de "123" → mensagem: "Senha incorreta!"
-
-O método deve usar throws Exception na assinatura.
-
-        No main, chame o método dentro de um try/catch e trate a exceção mostrando a mensagem com .getMessage().
-
-Se tudo estiver certo, imprima "Login efetuado com sucesso!".
-
-Teste com:
-
-Usuário e senha corretos
-
-Usuário incorreto
-
-Senha incorreta*/
+package excecoes.Throws;
 
 import java.util.Scanner;
 
@@ -38,25 +12,34 @@ public class Exercicio04 {
         System.out.println("Digite a senha correta: ");
         String senha = teclado.nextLine();
 
-
         try{
-            new Exercicio04().validarLogin(usuario, senha);
+            //cria uma instância da classe para chamar o metodo
+            Exercicio04 exercicio04 = new Exercicio04();
+            //chama o metodo validarLogin() e passa os valores digitados
+            exercicio04.validarLogin(usuario, senha);
         } catch (Exception e) {
+            // Caso o metodo lance uma excecao, ela e capturada aqui
+            // e a mensagem personalizada definida no throw e exibida
             System.out.println("Erro: " +  e.getMessage());
-
         }
 
-        teclado.close();
+        teclado.close(); //fecha o scanner
     }
 
-    public void validarLogin(String usuario, String senha) throws Exception{
+    //metodo que valida as credenciais do usuario
+    //caso o nome ou a senha estejam incorretos
+    //lança uma exceção do tipo Exception com uma mensagem personalizada
+    public void validarLogin(String usuario, String senha) throws Exception {
+        //se o nome do usuário for diferente de admin lança exceção
         if(!usuario.equals("admin")) {
             throw new Exception("Ususário inválido!");
         }
 
+        //se a senha for diferente de 123, lança exceção
         if(!senha.equals("123")) {
             throw new Exception("Senha incorreta!");
         }
+        //se chegou ate aqui significa que os dados estão corretos
         System.out.println("Login efetudado com sucesso!");
     }
 }

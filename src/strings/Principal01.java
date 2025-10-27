@@ -1,4 +1,4 @@
-package Strings;
+package strings;
 
 public class Principal01 {
     public static void main(String[] args) {
@@ -44,7 +44,8 @@ public class Principal01 {
         System.out.println("Comparando S51 a s84");
         System.out.println(s51.equals(s84));*/
 
-        //Metodo char public charAt (int index) Esse método requer um argumento inteiro que indica a posição do caractere que o método retorna. Esse método retorna o caractere localizado no índice especificado da String. Lembre-se de que os índices de string são baseados em zero.
+        //Metodo char public charAt (int index) Esse metodo requer um argumento inteiro que indica a posição do caractere
+        //que o metodo retorna. Esse metodo retorna o caractere localizado no índice especificado da String. Lembre-se de que os índices de string são baseados em zero
         String x = "Avião";
         System.out.println(x.charAt(2));
 
@@ -52,33 +53,38 @@ public class Principal01 {
         String y = "Autor";
         System.out.println(y.concat(" do livro"));
 
-        //Os operadores + e += sobrecarregados executam funções semelhantes ao método concat () - por exemplo:
-
+        //Os operadores + e += sobrecarregados executam funções semelhantes ao metodo concat () - por exemplo:
         String a = "Cartão";
         System.out.println(a+" de biblioteca");
         String b = "Estados";
         b+= " Unidos";
         System.out.println(b);
 
-        //Metodo public boolean equalsIgnoreCase (String s) Este método retorna um valor booleano (verdadeiro ou falso), dependendo se o valor da String no argumento é o mesmo que o valor da String usado para invocar o método. Esse método retornará verdadeiro mesmo quando os caracteres nos objetos String comparados tiverem casos diferentes
+        //Metodo public boolean equalsIgnoreCase (String s) Este metodo retorna um valor booleano (verdadeiro ou falso),
+        //dependendo se o valor da String no argumento é o mesmo que o valor da String usado para invocar o metodo
+        //esse metodo retornará verdadeiro mesmo quando os caracteres nos objetos String comparados tiverem casos diferentes
         String c = "Sair";
         System.out.println(c.equalsIgnoreCase("SAIR"));
         System.out.println(c.equalsIgnoreCase("tixe"));
 
-        //Metodo public int length () Esse método retorna o comprimento da String usada para invocar o método.
+        //Metodo public int length () Esse metodo retorna o comprimento da String usada para invocar o metodo.
         String d = "01234567";
         System.out.println(d.length());
 
-        //Metodo Substituição pública de String (char old, char new) Esse método retorna uma String cujo valor é o da String usada para chamar o método, atualizado para que qualquer ocorrência do caractere no primeiro argumento seja substituída pelo caractere no segundo argumento
+        //Metodo Substituição pública de String (char old, char new) Esse metodo retorna uma String cujo valor é o da
+        //String usada para chamar o metodo, atualizado para que qualquer ocorrência do caractere no primeiro argumento seja substituída pelo caractere no segundo argumento
         String e = "oxoxoxox";
         System.out.println(e.replace("x","X"));
 
-        //substring public String (int begin) / substring public String (int begin, int end) primeiro argumento e baseado pelo indice 0, o ultimo começa pelo 1 O método substring () é usado para retornar uma parte (ou substring) da String usada para invocar o método. O primeiro argumento representa o local inicial (baseado em zero) da substring. Se a chamada tiver apenas um argumento, a substring retornada incluirá os caracteres no final da String original. Se a chamada tiver dois argumentos, a substring retornada terminará com o caractere localizado na enésima posição da String original, em que n é o segundo argumento. Infelizmente, o argumento final não é baseado em zero; portanto, se o segundo argumento for 7, o último caractere na String retornado estará na posição 7 da String original, que é o índice 6.
+
         String f = "0123456789";
+        // substring(início) -> do índice 5 até o final
         System.out.println (f.substring (5));
+
+        // substring(início, fim) -> do índice 5 até 7 (fim-1)
         System.out.println (f.substring (5, 8));
 
-        // metodo public String toLowerCase() converte tudo para miniusculo Esse método retorna uma String cujo valor é a String usada para invocar o método, mas com qualquer caractere maiúsculo convertido em minúsculo
+        // metodo public String toLowerCase() converte tudo para miniusculo Esse metodo retorna uma String cujo valor é a String usada para invocar o metodo, mas com qualquer caractere maiúsculo convertido em minúsculo
         String g = "Um novo livro Java";
         System.out.println(g.toLowerCase());
 

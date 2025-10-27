@@ -1,4 +1,4 @@
-package Collections.LinkedHashSet;
+package collections.linkedhashset;
 
 import java.util.LinkedHashSet;
 
@@ -8,18 +8,14 @@ public class Principal01 {
 
         LinkedHashSet<String> linkedset = new LinkedHashSet<String>();
 
-        // Adicionando elementos ao LinkedHashSet
-
+        //adicionando elementos ao LinkedHashSet
         linkedset.add("Maruti");
-
         linkedset.add("BMW");
-
         linkedset.add("Honda");
-
         linkedset.add("Audi");
+        linkedset.add("Maruti"); //Esse não adicionará o novo elemento pois Maruti ja existe
 
-        linkedset.add("Maruti"); //Esse não adicionará o novo elemento pois Maruti já existe.
-
+        // adiciona novo elemento
         linkedset.add("WalksWagon");
 
         System.out.println("Tamanho do LinkedHashSet = " + linkedset.size());
@@ -30,7 +26,7 @@ public class Principal01 {
 
         System.out.println("Tentando remover Z, o qual não está presente: " + linkedset.remove("Z"));
 
-        System.out.println("Verificando se Maruti está presente = " + linkedset.contains("Maruti"));
+        System.out.println("Verificando se Maruti está presente: " + linkedset.contains("Maruti"));
 
         System.out.println("LinkedHashSet atualizada: " + linkedset);
 

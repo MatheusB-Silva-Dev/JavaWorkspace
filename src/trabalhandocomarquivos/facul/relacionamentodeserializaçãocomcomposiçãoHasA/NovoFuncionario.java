@@ -1,4 +1,4 @@
-package TrabalhandoComArquivos.Facul.RelacionamentoDeSerializaçãoComComposiçãoHasA;
+package trabalhandocomarquivos.facul.relacionamentodeserializaçãocomcomposiçãoHasA;
 
 import java.io.Serializable;
 

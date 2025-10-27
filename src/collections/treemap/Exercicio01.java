@@ -1,4 +1,4 @@
-package CollectionsPT2.TreeMap;
+package collections.treemap;
 
 /*Desafio: Cadastro de Alunos e Notas com TreeMap
 Objetivo:
@@ -35,22 +35,28 @@ import java.util.TreeMap;
 public class Exercicio01 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
+        //cria um TreeMap para armazenar alunos e suas notas
+        //TreeMap mantém as chaves em ordem natural
         Map<String, Double> alunos = new TreeMap<>();
+
+        //entrada de dados: nome e nota de 5 alunos
         for(int i = 1; i <=5; i++) {
             System.out.println("Digite o nome do aluno " + i + ":");
             String aluno = teclado.nextLine();
 
             System.out.println("Digite a nota do aluno " + i + ":");
             Double nota = teclado.nextDouble();
-            teclado.nextLine();
+            teclado.nextLine(); // limpar buffer
 
-            alunos.put(aluno, nota);
+            alunos.put(aluno, nota); //adiciona no TreeMap
         }
 
+        //mostra todos os alunos e suas notas
         for(Map.Entry <String, Double> entry : alunos.entrySet()) {
             System.out.println("Aluno: " + entry.getKey() + " | Nota: " + entry.getValue());
         }
 
+        //busca um aluno específico pelo nome
         System.out.println("Buscar aluno e nota respectiva: ");
         String buscar = teclado.nextLine();
 
@@ -60,12 +66,14 @@ public class Exercicio01 {
             System.out.println("Aluno não encontrado.");
         }
 
+        //inicializa variaveis para maior e menor nota
         String maiorNotaAluno = null;
         double maiorNota = Double.MIN_VALUE;
 
         String menorNotaAluno = null;
         double menorNota = Double.MAX_VALUE;
 
+        //percorre o TreeMap para encontrar maior e menor nota
         for(Map.Entry<String, Double> entry : alunos.entrySet()) {
             String nome = entry.getKey();
             double nota = entry.getValue();
@@ -81,6 +89,7 @@ public class Exercicio01 {
             }
         }
 
+        //imprime o aluno com maior e menor nota
         System.out.printf("Maior nota: %s (%.2f)\n", maiorNotaAluno, maiorNota);
         System.out.printf("Menor nota: %s (%.2f)\n", menorNotaAluno, menorNota);
 

@@ -1,4 +1,4 @@
-package CollectionsPT2.ClasseCollections;
+package collections.classecollections;
 
 import java.util.Collections;
 

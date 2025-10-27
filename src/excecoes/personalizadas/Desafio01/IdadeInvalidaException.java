@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio01;
+package excecoes.personalizadas.Desafio01;
 
 public class IdadeInvalidaException extends Exception {
     //construtor que recebe a mensagem personalizada

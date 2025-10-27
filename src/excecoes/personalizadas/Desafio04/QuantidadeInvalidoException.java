@@ -1,4 +1,4 @@
-package Excecoes.Personalizadas.Desafio04;
+package excecoes.personalizadas.Desafio04;
 // Exceção personalizada para quantidade inválida, estende RuntimeException
 public class QuantidadeInvalidoException extends RuntimeException {
     public QuantidadeInvalidoException(String quantidadeMsg) {
