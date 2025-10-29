@@ -1,4 +1,4 @@
-# Java - Workspace de Estudos
+# PROJETOS JAVA PURO
 
 Esta workspace reúne exercícios e exemplos práticos de **Java**, organizados por tópicos de estudo. Todos os códigos estão **comentados e otimizados para revisão rápida**, demonstrando domínio de **POO, tratamento de exceções, manipulação de Strings, loops, métodos, herança e modificadores de acesso etc**.
 
