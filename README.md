@@ -1,6 +1,7 @@
 # PROJETOS JAVA PURO
 
-Este repositório reúne exercícios e exemplos práticos de **Java**, organizados por tópicos de estudo. Todos os códigos estão **comentados e otimizados para revisão rápida**, demonstrando domínio de **POO, tratamento de exceções, manipulação de Strings, loops, métodos, herança e modificadores de acesso etc**.
+Este repositório reúne exercícios e exemplos práticos de **Java**, todos desenvolvidos individualmente por mim.  
+Os códigos estão comentados e otimizados para revisão rápida, demonstrando domínio de **POO**, tratamento de exceções, manipulação de **Strings**, **loops**, **métodos**, **herança** e **modificadores de acesso**, entre outros conceitos.
 
 ---
 
